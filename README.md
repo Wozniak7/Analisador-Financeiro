@@ -63,9 +63,8 @@ Clone o Repositório:
 
 **Bash**
 
-- `git clone https://github.com/SeuUsuario/SeuRepositorio.git`
+- `git clone https://github.com/Wozniak7/Analisador-Financeiro.git`
 - `cd SeuRepositorio`
-- `(Substitua SeuUsuario e SeuRepositorio pelos dados corretos do seu GitHub)`
 
 Crie e Ative um Ambiente Virtual (Recomendado):
 
