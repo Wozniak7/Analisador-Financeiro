@@ -310,7 +310,7 @@ if uploaded_file is not None:
     num_transacoes_exibir = 0 # Valor padrão para o slider
 
     with contextlib.redirect_stdout(console_output):
-        if tipo_planilha_selecionado == "Planilha de Transações (Extrato)":
+        if tipo_planilha_selecionado == "Planilha de Transações":
             # --- MOVIDO: Slider para o corpo principal, acima dos detalhes das transações ---
             st.subheader("Opções de Visualização de Transações Detalhadas")
             num_transacoes_exibir = st.slider(
@@ -382,14 +382,14 @@ if uploaded_file is not None:
 
         with tab1:
             # Título dinâmico baseado na seleção do slider
-            st.subheader(f"Receitas ({'Todas' if (tipo_planilha_selecionado == 'Planilha de Transações (Extrato)' and num_transacoes_exibir == 0) else f'Primeiras {num_transacoes_exibir}' if tipo_planilha_selecionado == 'Planilha de Transações (Extrato)' else 'Primeiras 10'})")
+            st.subheader(f"Receitas ({'Todas' if (tipo_planilha_selecionado == 'Planilha de Transações' and num_transacoes_exibir == 0) else f'Primeiras {num_transacoes_exibir}' if tipo_planilha_selecionado == 'Planilha de Transações' else 'Primeiras 10'})")
             if not resultados['Detalhes das Transações (Receitas)'].empty:
                 st.dataframe(resultados['Detalhes das Transações (Receitas)'])
             else:
                 st.info("Nenhuma receita encontrada.")
         with tab2:
             # Título dinâmico baseado na seleção do slider
-            st.subheader(f"Despesas ({'Todas' if (tipo_planilha_selecionado == 'Planilha de Transações (Extrato)' and num_transacoes_exibir == 0) else f'Primeiras {num_transacoes_exibir}' if tipo_planilha_selecionado == 'Planilha de Transações (Extrato)' else 'Primeiras 10'})")
+            st.subheader(f"Despesas ({'Todas' if (tipo_planilha_selecionado == 'Planilha de Transações' and num_transacoes_exibir == 0) else f'Primeiras {num_transacoes_exibir}' if tipo_planilha_selecionado == 'Planilha de Transações' else 'Primeiras 10'})")
             if not resultados['Detalhes das Transações (Despesas)'].empty:
                 st.dataframe(resultados['Detalhes das Transações (Despesas)'])
             else:
@@ -425,13 +425,13 @@ st.sidebar.markdown("### Como Usar")
 st.sidebar.write("1. Faça upload de uma planilha no formato Excel (.xlsx, .xls) ou CSV (.csv).")
 st.sidebar.write("2. **Selecione o tipo de planilha que você está enviando** (Transações ou Orçamento).")
 st.sidebar.write("3. O aplicativo irá gerar um resumo detalhado das suas finanças.")
-st.sidebar.markdown("### Requisitos da planilha de Transações (Extrato):")
+st.sidebar.markdown("### Requisitos da planilha de Transações:")
 st.sidebar.write("A planilha deve conter as seguintes colunas:")
 st.sidebar.write("- **Valor**: Valores das transações (pode ser chamado de 'quantia', 'montante', etc.)")
 st.sidebar.write("- **Data**: Data da transação (pode ser chamado de 'data_transacao', 'data_pagamento', etc.)")
 st.sidebar.write("- **Tipo**: Tipo da transação (pode ser chamado de 'categoria', 'natureza', etc.)")
 st.sidebar.write("- **Conta Bancária**: (opcional) Conta bancária associada à transação (pode ser chamado de 'conta', 'conta_bancaria', etc.)")
-st.sidebar.write("- **Descrição**: (opcional) Uma breve descrição da transação.")
+st.sidebar.write("- **Descrição**: Uma breve descrição da transação.")
 st.sidebar.markdown("### Requisitos da planilha de Orçamento (Mensal):")
 st.sidebar.write("A planilha **deve ser um arquivo Excel (.xlsx ou .xls)** e seguir o formato de orçamento mensal (categorias em linhas, meses em colunas), com as seções de Despesas e Receitas bem definidas. A coluna dos meses deve conter os nomes dos meses em português.")
 st.sidebar.markdown("### Recursos")
