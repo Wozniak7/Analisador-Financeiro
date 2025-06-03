@@ -291,7 +291,7 @@ st.write("Faça upload de sua planilha financeira para obter um resumo detalhado
 
 tipo_planilha_selecionado = st.radio(
     "Qual o tipo de planilha você vai enviar?",
-    ("Planilha de Transações", "Planilha de Orçamento (Em Desenvolvimento!)")
+    ("Planilha de Transações")
 )
 
 uploaded_file = st.file_uploader("Escolha um arquivo Excel ou CSV", type=["xlsx", "xls", "csv"])
