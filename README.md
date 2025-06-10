@@ -1,106 +1,115 @@
-# 📊 Analisador de Finanças Pessoais
-🚀 Visão Geral do Projeto
-Este projeto é um aplicativo web interativo, desenvolvido com Streamlit, que permite aos usuários analisar suas finanças pessoais de forma rápida e intuitiva. Basta fazer o upload de uma planilha (de transações diárias ou de orçamento mensal) para obter um resumo detalhado, insights sobre seus gastos e receitas, e visualizar o desempenho financeiro ao longo do tempo.
+# 📊 Analisador de Finanças Pessoais + Central de Utilidades
 
-Ideal para quem busca uma ferramenta simples e eficaz para o controle orçamentário e a saúde financeira!
+🚀 **Visão Geral do Projeto**  
+Este projeto é um aplicativo web interativo, desenvolvido com **Streamlit**, que começou como uma ferramenta de análise de finanças pessoais, mas evoluiu para uma **central multifuncional**. Agora, além de analisar planilhas financeiras, ele também oferece diversas funcionalidades úteis do dia a dia: clima, cotações, geradores e muito mais!
 
----
+Ideal para quem busca uma **plataforma simples, poderosa e versátil** para controle financeiro e utilidades rápidas.
 
-# ✨ Funcionalidades Principais
-Resumo Geral Instantâneo: Visualize rapidamente o Total a Receber, Total a Pagar e o Saldo Total.
-Análise por Tipo: Veja a distribuição de suas transações entre Receitas e Despesas.
-Desempenho Mensal: Acompanhe o fluxo financeiro mês a mês.
-Saldo por Conta Bancária: (Disponível para planilhas de transações) Obtenha o saldo consolidado por cada conta.
-Detalhes das Transações: Visualize as primeiras linhas das suas transações de Receitas e Despesas.
-Suporte a Múltiplos Formatos: Processa tanto extratos de transações quanto planilhas de orçamento mensal.
+🔗 **Acesse aqui:**  
+**https://simplifinancas.streamlit.app/**
 
 ---
 
-# 📝 Como Usar
-**É muito simples começar a analisar suas finanças!**
+## ✨ Funcionalidades Principais
 
-Acesse o Aplicativo: Se o aplicativo estiver online (no Streamlit Community Cloud, por exemplo), acesse a URL. Se estiver rodando localmente, siga as instruções de instalação abaixo.
-Faça o Upload da Sua Planilha: No campo "Escolha um arquivo Excel ou CSV", faça o upload do seu arquivo financeiro.
-Selecione o Tipo de Planilha:
-Se for um Extrato de Transações (Extrato), selecione a opção correspondente.
-Se for uma Planilha de Orçamento (Mensal), selecione essa opção.
-Visualize a Análise: O aplicativo processará seus dados e exibirá os resumos e gráficos automaticamente.
+### 📈 Finanças Pessoais
+- **Resumo Geral Instantâneo:** Total a Receber, Total a Pagar e Saldo Total.
+- **Análise por Tipo:** Distribuição entre Receitas e Despesas.
+- **Desempenho Mensal:** Acompanhamento financeiro mês a mês.
+- **Saldo por Conta Bancária:** (para planilhas de transações).
+- **Detalhamento das Transações:** Visualize as primeiras linhas de suas movimentações.
+- **Suporte a Múltiplos Formatos:** Planilhas de extratos e orçamentos mensais.
 
----
-
-# 📊 Formatos de Planilha Suportados
-**Para garantir uma análise precisa, suas planilhas devem seguir as seguintes estruturas:**
-
-[1.] Planilha de Transações (Extrato)
-Este formato é ideal para extratos bancários ou listas de transações diárias.
-
-Formatos Aceitos: .xlsx, .xls (Excel) ou .csv (CSV).
-Para CSV, o aplicativo espera o separador ; (ponto e vírgula), decimal , (vírgula) e milhar . (ponto).
-Colunas Esperadas (nomes alternativos aceitos):
-Valor (ou quantia, montante)
-Data (ou data_transacao, data_pagamento, data_recebimento)
-Tipo (ou categoria, natureza)
-Conta Bancária (opcional, ou conta, conta_bancaria, banco, descricao)
-Descrição (opcional)
-
-[2.] Planilha de Orçamento (Mensal)
-Este formato é para orçamentos planejados com categorias em linhas e meses em colunas.
-
-*⚠️ IMPORTANTE: Deve ser um arquivo Excel (.xlsx ou .xls). Arquivos CSV não são suportados para este tipo de planilha devido à sua estrutura complexa (células mescladas, múltiplas seções, etc.).*
-
-**Estrutura Esperada:**
-Deve conter seções claras para Despesas e Receitas.
-As categorias (e.g., Moradia, Salário) devem estar em colunas específicas.
-Os meses (e.g., Janeiro, Fevereiro, Março) devem ser colunas distintas para cada período.
-A planilha deve ser organizada de forma que o cabeçalho dos meses e as categorias de despesas/receitas possam ser identificados, similar ao modelo mostrado na imagem image_bc6c35.png (se você tiver essa imagem no seu repositório).
+### 🔍 Consultas e Utilidades Extras
+- **🌤️ Clima Atual:** Veja a previsão do tempo por cidade.
+- **💱 Cotação de Moedas:** Dólar, Euro e outras moedas em tempo real.
+- **📉 Cotações de Ações & Criptomoedas:** Acompanhe o mercado financeiro.
+- **😂 Geração de Conteúdo Aleatório:** Piadas, contos e frases motivacionais.
+- **🎬 Filmes & Séries:** Busque por títulos, resumos e avaliações.
+- **🧾 Geradores Diversos:**
+  - CPF e CNPJ válidos
+  - Senhas fortes
+  - QR Codes personalizados
 
 ---
 
-# 🛠️ Instalação (para rodar localmente)
-Para executar este projeto em sua máquina local, siga os passos abaixo:
+## 📝 Como Usar
 
-Clone o Repositório:
+1. **Acesse o Aplicativo:** Use o link acima ou rode localmente (veja a seção de instalação).
+2. **Escolha a Funcionalidade no Menu Lateral.**
+3. **Para Análise Financeira:**
+   - Faça o upload da sua planilha (Extrato ou Orçamento).
+   - O sistema processa os dados automaticamente e exibe os gráficos.
+4. **Para Utilidades:**  
+   - Preencha os dados solicitados (ex.: cidade, moeda, texto) e veja os resultados na tela.
 
-**Bash**
+---
 
-- `git clone https://github.com/Wozniak7/Analisador-Financeiro.git`
-- `cd SeuRepositorio`
+## 📊 Formatos de Planilha Suportados
 
-Crie e Ative um Ambiente Virtual (Recomendado):
+### 📄 Planilha de Transações (Extrato)
+- **Formatos:** `.xlsx`, `.xls`, `.csv`
+- **Separador CSV:** `;` (ponto e vírgula)
+- **Colunas esperadas:**  
+  - `Valor` (ou: quantia, montante)  
+  - `Data` (ou: data_transacao, data_pagamento, data_recebimento)  
+  - `Tipo` (ou: categoria, natureza)  
+  - `Conta Bancária` (opcional)  
+  - `Descrição` (opcional)
 
-**Bash**
+### 📑 Planilha de Orçamento (Mensal)
+- **Formato:** Apenas `.xlsx` ou `.xls`
+- **Estrutura Esperada:**
+  - Seções distintas para **Receitas** e **Despesas**
+  - Categorias nas linhas (Ex.: Moradia, Lazer)
+  - Meses como colunas (Ex.: Janeiro, Fevereiro)
 
-- `python -m venv venv`
+---
 
+## 🛠️ Instalação Local
+
+```bash
+# Clone o repositório
+git clone https://github.com/Wozniak7/Analisador-Financeiro.git
+cd Analisador-Financeiro
+
+# Crie e ative o ambiente virtual
+python -m venv venv
+
+# Ative o ambiente:
 # No Windows:
-- `.\venv\Scripts\activate`
+.\venv\Scripts\activate
 # No macOS/Linux:
-- `source venv/bin/activate`
+source venv/bin/activate
 
-Instale as Dependências:
+# Instale as dependências
+pip install -r requirements.txt
 
-**Bash**
+```
+---
 
-- `pip install -r requirements.txt`
-*Crie um arquivo requirements.txt na raiz do seu projeto com o seguinte conteúdo:*
+## 📦 requirements.txt
 
 - `streamlit`
 - `pandas`
 - `openpyxl`
+- `requests`
+- `qrcode`
 
-*Execute o Aplicativo Streamlit:*
-
-**Bash**
+## 🚀 Execute o app:
 
 - `streamlit run app_streamlit.py`
-Isso abrirá o aplicativo em seu navegador padrão.
 
 ---
 
-# 🤝 Contribuição
-**Contribuições são bem-vindas! Sinta-se à vontade para abrir issues para bugs ou sugestões, ou enviar pull requests.**
+## 🤝 Contribuição
+Contribuições são muito bem-vindas!
+Sinta-se à vontade para:
 
-# 👨‍💻 Desenvolvedor
-Este aplicativo foi desenvolvido por:
+Abrir issues com sugestões ou bugs
 
+Enviar pull requests com novas ideias e melhorias
+
+## 👨‍💻 Desenvolvedor
 **Danillo Wozniak Soares**
+*🔗 GitHub: @Wozniak7*
